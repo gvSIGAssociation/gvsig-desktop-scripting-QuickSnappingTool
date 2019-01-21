@@ -33,10 +33,14 @@ class QuickSnappingToolExtension(ScriptingExtension):
 class QuickSnappingTool(FormPanel):
   def __init__(self):
     FormPanel.__init__(self, gvsig.getResource(__file__, "snappingTool.xml"))
-    scp = SnapConfigPage()
+    self.scp = SnapConfigPage()
     self.pnl1.setLayout(BorderLayout())
-    self.pnl1.add(scp)
+    self.pnl1.add(self.scp)
     self.pnl1.updateUI()
+    i18n = ToolsLocator.getI18nManager()
+    self.btnSave.setText(i18n.getTranslation("_Save"))
+  def btnSave_click(self,args):
+    self.scp.storeValues()
 
 def main(*args):
     l = QuickSnappingTool()
