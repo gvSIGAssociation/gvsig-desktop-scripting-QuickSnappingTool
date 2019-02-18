@@ -38,9 +38,9 @@ class QuickSnappingTool(FormPanel):
     self.pnl1.add(self.scp)
     self.pnl1.updateUI()
     i18n = ToolsLocator.getI18nManager()
-    self.btnSave.setText(i18n.getTranslation("_Save"))
-  def btnSave_click(self,args):
-    self.scp.storeValues()
+    #self.btnSave.setText(i18n.getTranslation("_Save"))
+#def btnSave_click(self,args):
+#  self.scp.storeValues()
 
 def main(*args):
     l = QuickSnappingTool()
