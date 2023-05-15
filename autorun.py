@@ -35,7 +35,7 @@ def selfRegister():
     "Quick Snapping Tool" # Tooltip
   )
   action_show = actionManager.registerAction(action_show)
-  application.addTool(action_show, i18n.getTranslation("_Quick_Snapping_Tool"))
+  application.addTool(action_show,"view_navigation")
 
 def selfRegisterI18n():
   i18nManager = ToolsLocator.getI18nManager()
