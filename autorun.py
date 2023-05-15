@@ -31,7 +31,7 @@ def selfRegister():
     "show", # Action command
     "tools-quick-snapping-tool", # Icon name
     None, # Accelerator
-    1009000000, # Position 
+    3000999999, # Position 
     "Quick Snapping Tool" # Tooltip
   )
   action_show = actionManager.registerAction(action_show)
